@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Indian Penal Code Information</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="backCol" style="text-align: center">
+      <h2>Indian Penal Code Information</h2>
+      <br /><br />
+      <p>
+        The Indian Penal Code (IPC) is the official criminal code of India. It
+        is a comprehensive code intended to cover all substantive aspects of
+        criminal law. ...
+      </p>
+      <br /><br />
+
+      <hr />
+
+      <br /><br />
+      <h3>Get IPC Info</h3>
+      <br /><br />
+      <h5>Enter IPC Number</h5>
+      <input type="text" id="ipc" placeholder="IPC number" />
+      <br /><br />
+      <button onclick="myfunc()">info</button>
+      <br /><br />
+      <p id="demo"></p>
+    </div>
+
+    <script>
+      function myfunc() {
+        const IPC = [
+          {
+            NO: "506",
+            O: "Punishment for criminal intimidation ",
+            P: " punished with imprisonment of either description for a term which may extend to two years, or with fine, or with both; If threat be to cause death or grievous hurt, etc.",
+          },
+          {
+            NO: "354",
+            O: "Assault or criminal force to woman with intent to outrage her modesty",
+            P: " Whoever assaults or uses criminal force to any woman, intending to outrage or knowing it to be likely that he will thereby outrage her modesty, shall be punished with impris­onment of either description for a term which may extend to two years, or with fine, or with both.",
+          },
+          {
+            NO: "323",
+            O: "Punishment for voluntarily causing hurt",
+            P: "Whoever, except in the case provided for by section 334, voluntarily causes hurt, shall be punished with imprisonment of either description for a term which may extend to one year, or with fine which may extend to one thousand rupees, or with both",
+          },
+          {
+            NO: "101",
+            O: "Theft",
+            P: "Imprisonment for 6 month",
+          },
+          {
+            NO: "102",
+            O: "Murder",
+            P: "Death or imprisonment for life ",
+          },
+          {
+            NO: "103",
+            O: "Attempt to murder",
+            P: "Imprisonment for 10 years",
+          },
+          {
+            NO: "104",
+            O: "Violating traffic rules ",
+            P: "Fine or imprisonment for 6 month",
+          },
+        ];
+        let b = document.getElementById("ipc").value;
+        let a = IPC.find((IPC) => IPC.NO == b);
+        if (a == undefined) {
+          document.getElementById("demo").innerHTML = "enter valid ipc";
+        } else {
+          let c =
+            " " + a.NO + "  " + "  : " + a.O + "  " + "  :  " + "  " + a.P;
+          document.getElementById("demo").innerHTML = c;
+        }
+      }
+    </script>
+  </body>
+</html>

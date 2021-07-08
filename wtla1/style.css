@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.backCol {
+  width: 100%;
+  height: 100vh;
+  background-color: yellow;
+}
